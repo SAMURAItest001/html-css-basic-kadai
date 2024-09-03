@@ -10,11 +10,15 @@ body {
 .title_gooke-font {
   font-family: "Josefin Sans", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
   font-style: normal;
   text-shadow: 1px 1px 2px gray;
   border-bottom: solid 3px rgb(115, 115, 114);
   letter-spacing: 1.2em;
+}
+
+/* 【09月03日　記載漏れ(再提出箇所）】ルート要素のフォントサイズを20pxにし、h1はその2倍にします。 */
+h1 {
+  font-size: 2em;
 }
 
 /* スカイブルーに変更 */
@@ -27,8 +31,9 @@ body {
   color: rgb(255, 192, 203);
 }
 
-/* 名前〜血液型までをidを利用してdivタグで囲う
-　注意：idなので1回しか使えないことと、文頭は＃設定すること */
-#basic {
+/* 【09月03日　記載漏れ(再提出箇所）】<div>で囲った親要素(#)内のうち<p>の子要素を太文字にする
+名前〜血液型までをidを利用してdivタグで囲う
+注意：idなので1回しか使えないことと、文頭は＃設定すること*/
+#basic p {
   font-weight: bold;
 }
