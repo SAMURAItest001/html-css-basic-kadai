@@ -1,0 +1,104 @@
+
+/* Step2. ページ構成とスタイルの下準備 */
+/* h1、p、body要素の上下左右の余白（margin）を0に設定 */
+h1, p, body {
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
+
+/* 記事内のすべてのp要素とa要素のフォントサイズを20pxに設定x */
+p, a {
+  font-size: 20px;
+}
+
+/* Step3. header部分の作成 */
+/* headerの背景色、文字色、配置の設定 */
+.header_title {
+  text-align: center;
+  width: 100%;
+  color: rgb(255, 255, 255);
+  background-color: rgb(244, 79, 79);
+  margin-bottom: 20px;
+
+}
+
+/* Step4-2. main内スタイルの設定 */
+/* mail要素内の余白を上下左右10pxにする　*/
+main {
+  margin: 10px;
+}
+
+/* 東京、北海道、沖縄の大元となる枠 */
+#parent {
+  display: flex;
+  justify-content: space-around; 
+
+}
+
+#parent .contents {
+  border: solid 3px rgb(238, 204, 204);
+  flex-basis: 25%;
+  padding: 10px 15px; /* 上・右・下・左 */
+  margin: 20px 0px; /* 上・右・下・左 */
+  text-align: center;
+}
+
+h2 {
+  font-size: 25px;
+  border-bottom: dotted 3px rgb(236, 122, 122);
+}
+
+h2::before {
+  content: "●";
+  color: rgb(239, 111, 139);
+}
+
+/* mainの『傘』部分だけ太文字かつ色変更　*/
+.contents p:nth-child(3)::first-letter {
+  font-weight: bold;
+  color: rgb(97, 206, 249);
+}
+
+/* Step5-1. フッター構成の作成　*/
+/* footer の設定　*/
+footer {
+  width: 100%;
+  text-align: center;
+  background-color: rgb(244, 79, 79);
+}
+
+/* footer の a の色設定*/
+footer a {
+  color: rgb(255, 255, 255);
+}
+
+/* footer の a に擬似クラスを設定　訪問したことのあるリンクの色変更*/
+footer a:visited {
+  color: rgb(193, 234, 251);
+}
+
+/* footer の a に擬似クラスを設定　マウスカーソルが乗ると文字色変更*/
+footer a:hover {
+  color: rgb(245, 178, 168);
+}
+
+/* 【要復習】以下2箇所が分からずQA参照 */
+img {
+  margin: 10px 0px;
+  width: 75%;
+}
+
+/* Step6. レスポンシブ対応　*/
+/* レスポンシブデザイン のメディアクエリの指定 */
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 30px;
+  }
+  p {
+    font-size: 25px;
+  }
+
+  #parent {
+    flex-direction: column;
+  }
+}
